@@ -247,3 +247,93 @@ body{font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helve
 /* Footer */
 .site-footer{background:#1F2937;padding:20px 0}
 .footer-text{color:#F9FAF8;text-align:center;font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;font-size:15px;margin:0}
+
+/* Modern design overrides */
+/* Purpose: mejorar la estética con gradientes, sombras y espaciado más generoso */
+
+/* Hero: añadir ligero gradiente, mayor separación y tarjeta de contenido */
+.hero{
+  background: linear-gradient(180deg, rgba(31,41,55,0.95) 0%, rgba(31,41,55,1) 100%);
+  padding: 88px 0;
+}
+.hero-inner{gap:64px}
+.hero-content{background: rgba(255,255,255,0.03);padding:28px;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.hero-title{font-size:56px}
+.hero-subtitle{font-size:20px}
+.hero-image{border-radius:16px;box-shadow:0 12px 40px rgba(2,6,23,0.6)}
+
+/* Cards: usar grid para mejor responsividad y tarjetas elevadas */
+.cards-row{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 8px 24px rgba(16,24,40,0.06);align-items:center}
+.card-box{width:100%;height:0;padding-bottom:100%;border-radius:10px;border:3px solid var(--card-border);margin-bottom:16px;background:linear-gradient(180deg,#fff,#f7fbff)}
+.card-text{color:#111827;font-size:15px;max-width:100%}
+
+@media (max-width: 1024px){
+  .cards-row{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width: 640px){
+  .cards-row{grid-template-columns:1fr}
+  .hero-title{font-size:28px}
+  .hero-image{height:220px}
+  .hero-inner{gap:28px}
+}
+
+/* Quote: enfatizar con tipografía y centrar el autor con contraste */
+.quote{font-size:40px;letter-spacing:0.2px;color:#0f172a}
+.quote-author{font-size:14px;color:#0b1220;opacity:0.8}
+
+/* CTA: hacer container más prominente con blur y botón sólido */
+.cta-section{padding:24px 0;border-radius:14px;background:linear-gradient(90deg, #2e78f4 0%, #1f6ee6 100%);box-shadow:0 12px 40px rgba(56,130,246,0.18)}
+.cta-left{padding:8px 12px}
+.cta-title{font-size:18px}
+.cta-sub{font-size:14px;opacity:0.95}
+.cta-btn{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.9);padding:12px 22px;border-radius:999px}
+
+/* Footer: separar un poco y ajustar tipografía */
+.site-footer{padding:28px 0}
+.footer-text{font-size:14px;letter-spacing:0.2px}
+
+/* Responsive refinements */
+/* Large screens */
+@media (min-width:1200px){
+  .container{max-width:1200px}
+  .hero-title{font-size:64px}
+  .hero-content{max-width:700px}
+}
+
+/* Desktop / small desktop */
+@media (max-width:1024px){
+  .hero-title{font-size:48px}
+  .hero-inner{gap:48px}
+  .cards-row{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Tablet */
+@media (max-width:768px){
+  .container{padding:20px}
+  .hero{padding:60px 0}
+  .hero-title{font-size:36px}
+  .hero-image{height:260px}
+  .cards-row{grid-template-columns:repeat(2,1fr);gap:20px}
+  .card{padding:18px}
+  .cta-inner{flex-direction:column;align-items:flex-start}
+  .cta-right{margin-top:12px}
+}
+
+/* Small / Mobile */
+@media (max-width:480px){
+  body{font-size:15px}
+  .hero{padding:40px 0}
+  .hero-title{font-size:24px}
+  .hero-subtitle{font-size:16px}
+  .hero-image{height:180px}
+  .cards-row{grid-template-columns:1fr;gap:16px}
+  .card-box{width:100%;padding-bottom:100%}
+  .card-text{font-size:14px}
+  .cta-inner{align-items:center;text-align:center}
+  .cta-left{padding:0}
+  .cta-btn{padding:10px 16px}
+  .quote{font-size:22px}
+  .quote-author{text-align:center}
+}
+
