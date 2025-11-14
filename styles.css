@@ -1,0 +1,65 @@
+/* styles.css - Header minimalista moderno */
+
+:root{
+  --bg: #1F2937; /* fondo oscuro */
+  --logo-color: #F9FAF8;
+  --link-color: #E5E7EB;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg);}
+
+.site-header{
+  background: var(--bg);
+  color: var(--logo-color);
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 32px; /* padding amplio */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo izquierda, nav derecha */
+  gap: 24px;
+}
+
+.logo{
+  font-size: 24px; /* 24px */
+  font-weight: 500; /* 400 o 500 - usamos 500 para un poco más de presencia */
+  color: var(--logo-color);
+  letter-spacing: 0.2px;
+}
+
+.nav{
+  display: flex;
+  gap: 24px; /* separación entre enlaces */
+  align-items: center;
+}
+
+.nav-link{
+  font-size: 18px; /* 18px */
+  font-weight: 400; /* regular */
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.nav-link:hover{
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.nav-link:focus-visible{
+  outline: 3px solid rgba(255,255,255,0.14);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+@media (max-width: 640px){
+  .container{padding:20px}
+  .nav{gap:14px}
+  .logo{font-size:20px}
+  .nav-link{font-size:16px}
+}
