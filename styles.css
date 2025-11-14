@@ -185,3 +185,65 @@ body{font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helve
   .card-box{width:120px;height:120px}
   .card-text{max-width:260px}
 }
+
+/* Quote section */
+:root{
+  --quote-bg: #E5E7EB;
+  --quote-text: #1F2937;
+}
+
+.quote-section{
+  background: var(--quote-bg);
+  padding:48px 0;
+}
+
+.quote{
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-size:36px;
+  font-weight:300;
+  color:var(--quote-text);
+  text-align:center;
+  margin:0 0 12px 0;
+}
+
+.quote-author{
+  text-align:right;
+  font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-size:14px;
+  color:var(--quote-text);
+}
+
+/* CTA section */
+:root{
+  --cta-blue: #3882F6;
+  --cta-text-light: rgba(255,255,255,0.9);
+}
+
+.cta-section{
+  background:var(--cta-blue);
+  padding:20px 0;
+  border-radius:8px;
+}
+
+.cta-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.cta-left{color:#fff}
+.cta-title{font-family: 'Roboto', sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
+.cta-sub{font-size:14px;color:var(--cta-text-light)}
+
+.cta-btn{display:inline-block;padding:10px 18px;border-radius:6px;border:2px solid #fff;color:#fff;text-decoration:none;font-weight:500}
+.cta-btn:hover{opacity:0.9;transform:translateY(-1px)}
+
+@media (max-width:640px){
+  .cta-inner{flex-direction:column;align-items:center;text-align:center}
+  .cta-section{border-radius:0}
+}
+
+/* Footer */
+.site-footer{background:#1F2937;padding:20px 0}
+.footer-text{color:#F9FAF8;text-align:center;font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;font-size:15px;margin:0}
